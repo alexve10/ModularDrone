@@ -1,3 +1,5 @@
+//Control 4 Brushless Motors
+
 #include<Servo.h>
 
 //Definir lo pines de los 4 Motores
@@ -15,6 +17,8 @@ Servo esc4;
 void setup() 
 {
   Serial.begin(9600);
+  
+  //Inicializar los 4 motores dandoles su rango (valor mínimo y máximo)
   esc.attach(ESC_PIN,  1000, 2000);
   esc.write(0);
   delay(2000);
